@@ -2,7 +2,7 @@
 
 Aplicación Android local para investigar descarga y calentamiento mediante observaciones reales, pruebas comparables y explicaciones de sus límites. Interfaz en español de España. Paquete: `es.inhouse.batterycheck`; Android 10 o posterior, compilada para Android 16.
 
-**Versión 1.0.1:** [descargar Inhouse-battery-check.apk](https://github.com/miguelcoxcaballero/Inhouse-battery-check/releases/latest/download/Inhouse-battery-check.apk) · [última Release y archivos](https://github.com/miguelcoxcaballero/Inhouse-battery-check/releases/latest). Instala la APK en el móvil; no requiere compilar el proyecto para utilizarla.
+**Versión 1.0.1:** [descargar Inhouse-battery-check.apk](https://github.com/miguelcoxcaballero/Inhouse-battery-check/raw/refs/heads/downloads-v1.0.1/Inhouse-battery-check.apk) · [última Release y archivos](https://github.com/miguelcoxcaballero/Inhouse-battery-check/releases/latest). Instala la APK en el móvil; no requiere compilar el proyecto para utilizarla.
 
 ## Empezar
 
@@ -42,4 +42,4 @@ El código fuente incluye pruebas JVM y scripts para compilar, alinear y firmar.
 
 No se ha validado en un Galaxy S24 Ultra físico. El registro de verificación de la entrega detalla qué compilación, firma, manifiesto y flujos pudieron comprobarse; las pruebas JVM no sustituyen la validación de permisos, sensores, formato Samsung y reposo en ese teléfono.
 
-La Release contiene la APK firmada, el código fuente, la documentación y las sumas SHA-256 de los archivos. La versión 1.0.1 conserva el paquete y la identidad de firma de la entrega anterior para permitir su actualización. Las claves privadas y los datos personales quedan fuera del repositorio y de los archivos publicados.
+La Release enlaza la APK firmada, el código fuente, la documentación y las sumas SHA-256. Los archivos se conservan en la rama independiente `downloads-v1.0.1`; `main` contiene el proyecto fuente. La versión 1.0.1 conserva el paquete y la identidad de firma de la entrega anterior para permitir su actualización. Las claves privadas y los datos personales quedan fuera del repositorio y de los archivos publicados.
