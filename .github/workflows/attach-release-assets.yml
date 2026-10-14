@@ -1,0 +1,51 @@
+name: Attach verified files to release 1.0.1
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/attach-release-assets.yml]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-assets-v1-0-1
+  cancel-in-progress: false
+
+jobs:
+  attach:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Download, verify and attach the existing signed distribution
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          artifact_dir="$RUNNER_TEMP/inhouse-release-v1.0.1"
+          source_url="https://raw.githubusercontent.com/$GH_REPO/5507887cb3414d1cbd02dff9b0bfed5e873bc839"
+          mkdir -p "$artifact_dir"
+          files=(
+            Inhouse-battery-check.apk
+            Inhouse-battery-check-source.zip
+            Inhouse-battery-check-guia.md
+            Inhouse-battery-check-verificacion.md
+            RELEASE_NOTES.md
+            SHA256SUMS.txt
+          )
+          for file in "${files[@]}"; do
+            curl --proto '=https' --tlsv1.2 --fail --show-error --silent --location --retry 2 \
+              "$source_url/$file" --output "$artifact_dir/$file"
+          done
+          cd "$artifact_dir"
+          sha256sum --check SHA256SUMS.txt
+          printf '%s  %s\n' \
+            dbbfb2b687a752ea0bf7e5d51003ab756b9433e10b0800ac131b1d128d82fe10 \
+            Inhouse-battery-check.apk | sha256sum --check -
+          gh release view v1.0.1 --repo "$GH_REPO"
+          gh release upload v1.0.1 "${files[@]}" --repo "$GH_REPO" --clobber
