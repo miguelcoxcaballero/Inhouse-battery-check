@@ -2,7 +2,7 @@
 
 ## Instalar
 
-1. Descarga [Inhouse-battery-check.apk](https://github.com/miguelcoxcaballero/Inhouse-battery-check/raw/refs/heads/downloads-v1.0.1/Inhouse-battery-check.apk) en el móvil desde la [Release pública](https://github.com/miguelcoxcaballero/Inhouse-battery-check/releases/latest).
+1. Descarga [Inhouse-battery-check.apk](https://github.com/miguelcoxcaballero/Inhouse-battery-check/releases/latest/download/Inhouse-battery-check.apk) en el móvil desde la [Release pública](https://github.com/miguelcoxcaballero/Inhouse-battery-check/releases/latest).
 2. Abre el archivo y, si Android lo solicita, permite instalar aplicaciones desde esa fuente concreta. Completa la instalación y abre **Inhouse battery check**. Puedes retirar después la autorización de instalación a esa fuente.
 3. Sigue los cuatro pasos del asistente. No hace falta root ni Shizuku. Sin permisos opcionales seguirás viendo batería, temperatura, carga, pantalla y conexión básica.
 
