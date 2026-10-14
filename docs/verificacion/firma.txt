@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Inhouse Battery Check, O=Independent local build, C=ES
+Signer #1 certificate SHA-256 digest: bc1e7e478fcac0434a8d2d22ff9acdbd4db855dbbf184c08c1fc761182b50891
+Signer #1 certificate SHA-1 digest: 5678e552f036374c2a31b480801f674a615afff4
+Signer #1 certificate MD5 digest: 8ac8316bacf7a7c3cb8fb66beb1f88d4
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 3072
+Signer #1 public key SHA-256 digest: 879aa8e2e943b2582a9ce94bcd8a8015f7d674c7efe5435597e2d08c29c779d1
+Signer #1 public key SHA-1 digest: 082577fdf32771f21c114fe9b223e957cedd8da3
+Signer #1 public key MD5 digest: db368ba2572f3ad671e39c989f829834
